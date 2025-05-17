@@ -5,7 +5,7 @@
     "country": "Brasil",
     "description": "Ensopado de feijão preto com carnes.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747502372/5523a3b9-38a0-4556-93f6-158499161bfd_cqezbo.png",
-    "price": 45.00$
+    "price": 45.00
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "country": "Brasil",
     "description": "Bolinhas assadas feitas de polvilho e queijo.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747502453/Dia-do-Pao-de-Queijo-7-receitas-saudaveis-de-pao-de-queijo_doi6tu.png",
-    "price": 12.00$
+    "price": 12.00
   },
   {
     "id": 3,
