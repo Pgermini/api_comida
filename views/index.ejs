@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title><%= title %></title>
+  <meta charset="UTF-8">
+  <title>API de Comidas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f3f3f3;
+    }
+    h1 {
+      text-align: center;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      width: 220px;
+      padding: 10px;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .nome {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .pais, .preco {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <h1><%= message %></h1>
-    <p>Use as seguintes rotas para acessar os dados:</p>
-    <ul>
-        <li><code>/foods</code> – Lista todas as comidas</li>
-        <li><code>/foods/:id</code> – Busca comida por ID</li>
-        <li><code>/foods/search?name=nome</code> – Busca comida por nome</li>
-    </ul>
+  <h1>Comidas de 6 Países</h1>
+  <div class="grid">
+    <% foods.forEach(food => { %>
+      <div class="card">
+        <img src="<%= food.imagem %>" alt="<%= food.nome %>">
+        <div class="nome"><%= food.nome %></div>
+        <div class="pais"><%= food.pais %></div>
+        <div class="preco"><%= food.preco %></div>
+      </div>
+    <% }) %>
+  </div>
 </body>
 </html>
