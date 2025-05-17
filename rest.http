@@ -1,0 +1,8 @@
+### Lista todas as comidas
+GET http://localhost:3000/foods
+
+### Busca comida por ID
+GET http://localhost:3000/foods/1
+
+### Busca comida por nome (ex: "sushi")
+GET http://localhost:3000/foods/search?name=sushi
