@@ -1,7 +1,7 @@
 [
   {
     "nome": "brasil",
-    "display": "Brasil",
+    "display": "brasil",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747587298/Flag_of_Brazil.svg_g92m47.png"
   },
   {
@@ -16,12 +16,12 @@
   },
   {
     "nome": "eua",
-    "display": "EUA",
+    "display": "eua",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747587494/estados-unidos_pmoieu.webp"
   },
   {
     "nome": "italia",
-    "display": "Itália",
+    "display": "italia",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747587520/download_ysshyv.png"
   },
   {
