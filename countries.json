@@ -1,26 +1,32 @@
 [
   {
-    "nome": "Brasil",
+    "nome": "brasil",
+    "display": "Brasil",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747587298/Flag_of_Brazil.svg_g92m47.png"
   },
   {
-    "nome": "Argentina",
+    "nome": "argentina",
+    "display": "Argentina",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747587377/Flag_of_Argentina.svg_swdtr4.webp"
   },
   {
-    "nome": "Japão",
+    "nome": "japao",
+    "display": "Japão",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747587449/bandeira-do-japao-fb_ggbhv6.webp"
   },
   {
-    "nome": "EUA",
+    "nome": "eua",
+    "display": "EUA",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747587494/estados-unidos_pmoieu.webp"
   },
   {
-    "nome": "Itália",
+    "nome": "italia",
+    "display": "Itália",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747587520/download_ysshyv.png"
   },
   {
-    "nome": "México",
+    "nome": "mexico",
+    "display": "México",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747587572/download_wzyzoq.png"
   }
 ]
