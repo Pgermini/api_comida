@@ -48,10 +48,11 @@
   <h1>Comidas por Países</h1>
   <div class="bandeiras">
     <% countries.forEach(pais => { %>
-      <a href="/pais/<%= pais.nome %>">
-        <img src="<%= pais.img %>" alt="Bandeira de <%= pais.nome %>">
-        <div class="nome-pais"><%= pais.nome %></div>
-      </a>
+     <a href="/pais/<%= pais.nome %>">
+        <img src="<%= pais.img %>" alt="Bandeira de <%= pais.display %>">
+        <div class="nome-pais"><%= pais.display %></div>
+    </a>
+
     <% }) %>
   </div>
 </body>
