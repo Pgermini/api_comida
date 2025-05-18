@@ -1,19 +1,24 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
+const path = require('path');
 const PORT = process.env.PORT || 3000;
 
-// Middleware para servir JSON corretamente
-app.use(express.json());
+// 1. Configurar EJS como view engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views')); // pasta onde está o index.ejs
 
-// Rota principal que retorna todas as comidas diretamente
+// 2. Servir arquivos estáticos se necessário (ex: CSS, imagens locais)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// 3. Rota que renderiza a página com EJS
 app.get('/', (req, res) => {
   const data = fs.readFileSync('./foods.json');
   const foods = JSON.parse(data);
-  res.json(foods);
+  res.render('index', { foods }); // renderiza index.ejs com os dados
 });
 
-// Outras rotas
+// 4. Rota que retorna JSON puro
 app.get('/foods', (req, res) => {
   const data = fs.readFileSync('./foods.json');
   const foods = JSON.parse(data);
@@ -39,7 +44,7 @@ app.get('/foods/search', (req, res) => {
   res.json(results);
 });
 
-// Inicia o servidor
+// Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
