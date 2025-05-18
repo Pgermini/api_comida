@@ -50,7 +50,7 @@
         <img src="<%= food.img %>" alt="<%= food.name %>">
         <div class="nome"><%= food.name %></div>
         <div class="pais"><%= food.country %></div>
-        <div class="preco"><%= food.price %></div>
+        <div class="preco">R$ <%= Number(food.price).toFixed(2).replace('.', ',') %></div>
       </div>
     <% }) %>
   </div>
