@@ -2,54 +2,60 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Comidas por Países</title>
+  <title>Comidas do <%= country %></title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 30px;
-      background-color: #f3f3f3;
+      padding: 40px;
+      background-color: #f9f9f9;
+      text-align: center;
     }
     h1 {
-      text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
-    .bandeiras {
+    .comidas {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 30px;
     }
-    .card-bandeira {
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.2s;
+    .card {
+      background: white;
+      padding: 20px;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: left;
     }
-    .card-bandeira:hover {
-      transform: scale(1.05);
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
     }
-    .card-bandeira img {
-      width: 120px;
-      height: 80px;
-      object-fit: contain;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    .card h2 {
+      margin-top: 10px;
+      font-size: 20px;
     }
-    .nome-pais {
-      margin-top: 8px;
+    .card p {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+    .price {
       font-weight: bold;
-      color: #333;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Comidas por Países</h1>
-  <div class="bandeiras">
-    <% countries.forEach(pais => { %>
-      <div class="card-bandeira">
-        <a href="/pais/<%= pais.nome %>">
-          <img src="<%= pais.img %>" alt="Bandeira de <%= pais.nome %>">
-          <div class="nome-pais"><%= pais.nome %></div>
-        </a>
+  <h1>Comidas do <%= country %></h1>
+  <div class="comidas">
+    <% foods.forEach(comida => { %>
+      <div class="card">
+        <img src="<%= comida.img %>" alt="<%= comida.name %>">
+        <h2><%= comida.name %></h2>
+        <p><%= comida.description %></p>
+        <p class="price">R$ <%= comida.price.toFixed(2) %></p>
       </div>
     <% }) %>
   </div>
