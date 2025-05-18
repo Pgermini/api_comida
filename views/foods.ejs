@@ -2,76 +2,64 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Comidas do <%= pais %></title>
+  <title>Comidas típicas de <%= pais.charAt(0).toUpperCase() + pais.slice(1) %></title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
       padding: 40px;
       text-align: center;
-      background-color: #f3f3f3;
     }
+
     h1 {
       margin-bottom: 30px;
-      text-transform: capitalize;
     }
-    .comidas {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
+      justify-items: center;
     }
-    .comida {
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      width: 220px;
-      padding: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .comida img {
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       width: 100%;
-      height: 140px;
+      max-width: 300px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
       object-fit: cover;
       border-radius: 8px;
+      margin-bottom: 10px;
     }
-    .comida h3 {
-      margin: 10px 0 5px;
+
+    .card h3 {
+      margin: 10px 0;
     }
-    .comida p {
-      margin: 0;
+
+    .card p {
+      margin: 4px 0;
       color: #555;
-    }
-    .voltar {
-      margin-top: 30px;
-      display: inline-block;
-      text-decoration: none;
-      color: #333;
-      border: 1px solid #333;
-      padding: 8px 16px;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-    .voltar:hover {
-      background-color: #333;
-      color: white;
     }
   </style>
 </head>
 <body>
-  <h1>Comidas do <%= pais %></h1>
-  <div class="comidas">
-    <% if (foods.length === 0) { %>
-      <p>Nenhuma comida encontrada para este país.</p>
-    <% } else { %>
-      <% foods.forEach(comida => { %>
-        <div class="comida">
-          <img src="<%= comida.imagem %>" alt="<%= comida.nome %>">
-          <h3><%= comida.nome %></h3>
-          <p>Preço: R$ <%= comida.preco.toFixed(2) %></p>
-        </div>
-      <% }) %>
-    <% } %>
+  <h1>Comidas típicas de <%= pais.charAt(0).toUpperCase() + pais.slice(1) %></h1>
+  <div class="grid">
+    <% foods.forEach(comida => { %>
+      <div class="card">
+        <img src="<%= comida.img %>" alt="<%= comida.name %>">
+        <h3><%= comida.name %></h3>
+        <p><%= comida.description %></p>
+        <p><strong>R$ <%= comida.price.toFixed(2) %></strong></p>
+      </div>
+    <% }) %>
   </div>
-  <a href="/" class="voltar">← Voltar</a>
 </body>
 </html>
