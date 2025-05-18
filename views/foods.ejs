@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Comidas típicas de <%= pais %></title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Comidas típicas de <%= pais %></h1>
+
+    <div class="food-list">
+      <% if (foods.length > 0) { %>
+        <% foods.forEach(food => { %>
+          <div class="food-card">
+            <img src="<%= food.imagem %>" alt="<%= food.nome %>" width="200" height="150">
+            <h3><%= food.nome %></h3>
+            <p>Preço: R$ <%= food.preco %></p>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <p>Nenhuma comida encontrada para este país.</p>
+      <% } %>
+    </div>
+
+    <a href="/" class="btn-voltar">Voltar</a>
+  </div>
+</body>
+</html>
