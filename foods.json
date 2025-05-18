@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Feijoada",
-    "country": "Brasil",
+    "country": "brasil",
     "description": "Ensopado de feijão preto com carnes.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747502372/5523a3b9-38a0-4556-93f6-158499161bfd_cqezbo.png",
     "price": 45.00
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Pão de queijo",
-    "country": "Brasil",
+    "country": "brasil",
     "description": "Bolinhas assadas feitas de polvilho e queijo.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747502453/Dia-do-Pao-de-Queijo-7-receitas-saudaveis-de-pao-de-queijo_doi6tu.png",
     "price": 12.00
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "name": "Moqueca",
-    "country": "Brasil",
+    "country": "brasil",
     "description": "Ensopado de peixe com leite de coco e dendê.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747502543/moqueca-de-peixe_g68a7w.webp",
     "price": 52.00
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "name": "Acarajé",
-    "country": "Brasil",
+    "country": "brasil",
     "description": "Bolinho frito de feijão fradinho com recheio de vatapá.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747502572/acaraje_epcf0j.jpg",
     "price": 18.00
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "name": "Asado",
-    "country": "Argentina",
+    "country": "argentina",
     "description": "Churrasco tradicional argentino.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747502784/12_2022_Playing_with_Fire_HERO_Photo_Tara_Donne_Food_Chris_Lanier_Props_Christina_Lane_1920x1280_lajgbs.webp",
     "price": 60.00
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "name": "Empanada",
-    "country": "Argentina",
+    "country": "argentina",
     "description": "Pastel assado ou frito recheado com carne, queijo, etc.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747502809/images_doj4hk.jpg",
     "price": 10.00
@@ -50,7 +50,7 @@
   {
     "id": 7,
     "name": "Milanesa",
-    "country": "Argentina",
+    "country": "argentina",
     "description": "Bife empanado e frito.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747502812/Cotoletta_alla_milanese_dqfkhp.jpg",
     "price": 38.00
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "name": "Choripán",
-    "country": "Argentina",
+    "country": "argentina",
     "description": "Sanduíche de linguiça com pão.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747502837/donde-comer-choripan-buenos-aires_pjpc5x.jpg",
     "price": 16.00
@@ -66,7 +66,7 @@
   {
     "id": 9,
     "name": "Sushi",
-    "country": "Japão",
+    "country": "japao",
     "description": "Arroz temperado com peixe cru ou frutos do mar.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503211/sushi-edo-zushi_wiqiqb.jpg",
     "price": 48.00
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "name": "Ramen",
-    "country": "Japão",
+    "country": "japao",
     "description": "Sopa de macarrão com caldo, carne e vegetais.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503232/Tokyo-Ramen_xyjhcy.webp",
     "price": 42.00
@@ -82,7 +82,7 @@
   {
     "id": 11,
     "name": "Tempurá",
-    "country": "Japão",
+    "country": "japao",
     "description": "Vegetais ou frutos do mar empanados e fritos.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503235/hq720_nbgisy.jpg",
     "price": 32.00
@@ -90,7 +90,7 @@
   {
     "id": 12,
     "name": "Okonomiyaki",
-    "country": "Japão",
+    "country": "japao",
     "description": "Panqueca japonesa com vários recheios.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503268/images_ig0azj.jpg",
     "price": 35.00
@@ -98,7 +98,7 @@
   {
     "id": 13,
     "name": "Hamburger",
-    "country": "EUA",
+    "country": "eua",
     "description": "Sanduíche com carne moída grelhada.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503420/hamburger_americano_prato_tipico_ahnjlr.jpg",
     "price": 28.00
@@ -106,7 +106,7 @@
   {
     "id": 14,
     "name": "Hot dog",
-    "country": "EUA",
+    "country": "eua",
     "description": "Pão com salsicha e acompanhamentos.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503469/09121723079133_rilg3n.webp",
     "price": 18.00
@@ -114,7 +114,7 @@
   {
     "id": 15,
     "name": "Mac and cheese",
-    "country": "EUA",
+    "country": "eua",
     "description": "Macarrão com queijo cremoso.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503474/20241107-SEA-The-Food-Labs-Ultra-Gooey-Stovetop-Mac-and-Cheese-Recipe-MorganHuntGlaze-2-16a276ff0ce34f7e988b0b74c37cd229_oyfhoa.jpg",
     "price": 30.00
@@ -122,7 +122,7 @@
   {
     "id": 16,
     "name": "Fried chicken",
-    "country": "EUA",
+    "country": "eua",
     "description": "Frango frito crocante e temperado.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503471/images_srwr1b.jpg",
     "price": 36.00
@@ -130,7 +130,7 @@
   {
     "id": 17,
     "name": "Pizza Margherita",
-    "country": "Itália",
+    "country": "italia",
     "description": "Pizza com molho, mussarela e manjericão.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503620/margherita-7d163fb8_zdzs88.jpg",
     "price": 40.00
@@ -138,7 +138,7 @@
   {
     "id": 18,
     "name": "Lasanha",
-    "country": "Itália",
+    "country": "italia",
     "description": "Prato de camadas de massa, carne e molho.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503639/images_heqcjp.jpg",
     "price": 46.00
@@ -146,7 +146,7 @@
   {
     "id": 19,
     "name": "Risoto",
-    "country": "Itália",
+    "country": "italia",
     "description": "Arroz cremoso cozido com caldo e queijo.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503643/iStock-1367349793_sebo1i.jpg",
     "price": 44.00
@@ -154,7 +154,7 @@
   {
     "id": 20,
     "name": "Gnocchi",
-    "country": "Itália",
+    "country": "italia",
     "description": "Nhoque de batata com molho.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503647/gnocchidafortuna_aloalobahia_a66w1a.jpg",
     "price": 38.00
@@ -162,7 +162,7 @@
   {
     "id": 21,
     "name": "Tacos",
-    "country": "México",
+    "country": "mexico",
     "description": "Tortilla recheada com carne, queijo e vegetais.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503772/347923-original_q2kgz8.webp",
     "price": 20.00
@@ -170,7 +170,7 @@
   {
     "id": 22,
     "name": "Guacamole",
-    "country": "México",
+    "country": "mexico",
     "description": "Pasta de abacate com temperos.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503792/guacamole-como-fazer_tygldy.avif",
     "price": 15.00
@@ -178,7 +178,7 @@
   {
     "id": 23,
     "name": "Quesadilla",
-    "country": "México",
+    "country": "mexico",
     "description": "Tortilla recheada com queijo grelhada.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503789/Quesadilla-1_p5k5vp.webp",
     "price": 25.00
@@ -186,7 +186,7 @@
   {
     "id": 24,
     "name": "Chilaquiles",
-    "country": "México",
+    "country": "mexico",
     "description": "Tortillas cortadas com molho e acompanhamentos.",
     "img": "https://res.cloudinary.com/dcjoh1mcl/image/upload/v1747503794/images_i8ducd.jpg",
     "price": 22.00
