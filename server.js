@@ -4,47 +4,36 @@ const fs = require('fs');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 
-// 1. Configurar EJS como view engine
+// Configura EJS
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views')); // pasta onde está o index.ejs
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static('public'));
+app.use(express.json());
 
-// 2. Servir arquivos estáticos se necessário (ex: CSS, imagens locais)
-app.use(express.static(path.join(__dirname, 'public')));
-
-// 3. Rota que renderiza a página com EJS
+// Página inicial com bandeiras dos países
 app.get('/', (req, res) => {
   const data = fs.readFileSync('./foods.json');
   const foods = JSON.parse(data);
-  res.render('index', { foods }); // renderiza index.ejs com os dados
+  const countries = [...new Set(foods.map(f => f.pais))];
+  res.render('index', { countries });
 });
 
-// 4. Rota que retorna JSON puro
+// Página de comidas por país
+app.get('/pais/:nome', (req, res) => {
+  const data = fs.readFileSync('./foods.json');
+  const foods = JSON.parse(data);
+  const pais = req.params.nome;
+  const filteredFoods = foods.filter(f => f.pais === pais);
+  res.render('foods', { pais, foods: filteredFoods });
+});
+
+// API JSON
 app.get('/foods', (req, res) => {
   const data = fs.readFileSync('./foods.json');
   const foods = JSON.parse(data);
   res.json(foods);
 });
 
-app.get('/foods/:id', (req, res) => {
-  const data = fs.readFileSync('./foods.json');
-  const foods = JSON.parse(data);
-  const food = foods.find(f => f.id == req.params.id);
-  if (food) {
-    res.json(food);
-  } else {
-    res.status(404).json({ error: 'Comida não encontrada' });
-  }
-});
-
-app.get('/foods/search', (req, res) => {
-  const name = req.query.name?.toLowerCase();
-  const data = fs.readFileSync('./foods.json');
-  const foods = JSON.parse(data);
-  const results = foods.filter(f => f.name.toLowerCase().includes(name));
-  res.json(results);
-});
-
-// Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
