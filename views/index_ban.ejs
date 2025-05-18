@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Comidas por Países</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+      background-color: #f3f3f3;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .bandeiras {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .bandeiras a {
+      text-decoration: none;
+      color: black;
+    }
+    .bandeiras img {
+      width: 100px;
+      height: 70px;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .bandeiras img:hover {
+      transform: scale(1.1);
+      border-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Comidas por Países</h1>
+  <div class="bandeiras">
+    <% countries.forEach(pais => { %>
+      <a href="/pais/<%= pais %>">
+        <img src="/bandeiras/<%= pais.toLowerCase() %>.png" alt="<%= pais %>">
+        <div><%= pais %></div>
+      </a>
+    <% }) %>
+  </div>
+</body>
+</html>
