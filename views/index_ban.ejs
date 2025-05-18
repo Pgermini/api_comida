@@ -22,6 +22,9 @@
     .bandeiras a {
       text-decoration: none;
       color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .bandeiras img {
       width: 100px;
@@ -35,15 +38,19 @@
       transform: scale(1.1);
       border-color: #333;
     }
+    .nome-pais {
+      margin-top: 8px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <h1>Comidas por Países</h1>
   <div class="bandeiras">
     <% countries.forEach(pais => { %>
-      <a href="/pais/<%= pais %>">
-        <img src="/bandeiras/<%= pais.toLowerCase() %>.png" alt="<%= pais %>">
-        <div><%= pais %></div>
+      <a href="/pais/<%= pais.nome %>">
+        <img src="<%= pais.img %>" alt="Bandeira de <%= pais.nome %>">
+        <div class="nome-pais"><%= pais.nome %></div>
       </a>
     <% }) %>
   </div>
