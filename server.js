@@ -12,11 +12,11 @@ app.use(express.json());
 
 // Página inicial com bandeiras dos países
 app.get('/', (req, res) => {
-  const data = fs.readFileSync('./foods.json');
-  const foods = JSON.parse(data);
-  const countries = [...new Set(foods.map(f => f.country))];
+  const data = fs.readFileSync('./countries.json');
+  const countries = JSON.parse(data);
   res.render('index', { countries });
 });
+
 
 // Página de comidas por país
 app.get('/pais/:country', (req, res) => {
