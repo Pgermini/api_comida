@@ -14,17 +14,17 @@ app.use(express.json());
 app.get('/', (req, res) => {
   const data = fs.readFileSync('./foods.json');
   const foods = JSON.parse(data);
-  const countries = [...new Set(foods.map(f => f.pais))];
+  const countries = [...new Set(foods.map(f => f.country))];
   res.render('index', { countries });
 });
 
 // Página de comidas por país
-app.get('/pais/:nome', (req, res) => {
+app.get('/pais/:country', (req, res) => {
   const data = fs.readFileSync('./foods.json');
   const foods = JSON.parse(data);
-  const pais = req.params.nome;
-  const filteredFoods = foods.filter(f => f.pais === pais);
-  res.render('foods', { pais, foods: filteredFoods });
+  const country = req.params.country;
+  const filteredFoods = foods.filter(f => f.country === country);
+  res.render('foods', { country, foods: filteredFoods });
 });
 
 // API JSON
