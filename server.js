@@ -4,33 +4,29 @@ const fs = require('fs');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 
-// Configura EJS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 app.use(express.json());
 
-// Página inicial com bandeiras dos países
+// Carrega JSONs
+const countries = JSON.parse(fs.readFileSync('./countries.json'));
+const foods = JSON.parse(fs.readFileSync('./foods.json'));
+
+// Página inicial: bandeiras dos países
 app.get('/', (req, res) => {
-  const data = fs.readFileSync('./countries.json');
-  const countries = JSON.parse(data);
   res.render('index', { countries });
 });
 
-
 // Página de comidas por país
-app.get('/pais/:country', (req, res) => {
-  const data = fs.readFileSync('./foods.json');
-  const foods = JSON.parse(data);
-  const country = req.params.country;
-  const filteredFoods = foods.filter(f => f.country === country);
-  res.render('foods', { country, foods: filteredFoods });
+app.get('/pais/:nome', (req, res) => {
+  const nome = req.params.nome;
+  const filteredFoods = foods.filter(f => f.country === nome);
+  res.render('foods', { pais: nome, foods: filteredFoods });
 });
 
-// API JSON
+// API pública com todos os pratos
 app.get('/foods', (req, res) => {
-  const data = fs.readFileSync('./foods.json');
-  const foods = JSON.parse(data);
   res.json(foods);
 });
 
